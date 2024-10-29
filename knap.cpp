@@ -21,7 +21,7 @@ int main()
         {
             if(i == 0 || w == 0) v[i][w] = 0;
             else if(weight[i] > w) v[i][w] = v[i - 1][w];
-            else v[i][w] = max(v[i - 1][w], v[i - 1][w - weight[I]] + value[i]);
+            else v[i][w] = max(v[i - 1][w], v[i - 1][w - weight[i]] + value[i]);
         }
     }
     cout << "Maximum Profit: " << v[n][maxW] << '\n';
