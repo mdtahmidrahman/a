@@ -2,7 +2,7 @@
 using namespace std;
 int main()
 {
-    int n, w, maxW, take, leave;
+    int n, w, maxW;
     cout << "Max W: "; cin >> maxW;
     cout << "Items: "; cin >> n;
 
@@ -19,16 +19,9 @@ int main()
     {
         for(int w = 0; w <= maxW; w++)
         {
-            if(i == 0 || w == 0)
-                v[i][w] = 0;
-            else if(weight[i] > w)
-                v[i][w] = v[i - 1][w];
-            else
-            {
-                leave = v[i - 1][w];
-                take = value[i] + v[i - 1][w - weight[i]];
-                v[i][w] = max(take, leave);
-            }
+            if(i == 0 || w == 0) v[i][w] = 0;
+            else if(weight[i] > w) v[i][w] = v[i - 1][w];
+            else v[i][w] = max(v[i - 1][w], v[i - 1][w - weight[I]] + value[i]);
         }
     }
     cout << "Maximum Profit: " << v[n][maxW] << '\n';
@@ -45,6 +38,5 @@ int main()
         }
         else i--;
     }
-
     return 0;
 }
