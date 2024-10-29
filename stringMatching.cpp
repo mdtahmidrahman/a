@@ -23,6 +23,19 @@ int main()
         }
     }
     cout << "Number of matches " << ans << endl;
-
+/*
+// Naive algorithm for Pattern Searching
+    int M = pat.size();
+    int N = txt.size();
+    for (int i = 0; i <= N - M; i++)
+    {
+        int j;
+        for (j = 0; j < M; j++)
+        {    
+            if (txt[i + j] != pat[j]) break;
+        }
+        if (j == M) cout << "Pattern found at index " << i << endl;
+    }
+*/
     return 0;
 }
