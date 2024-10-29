@@ -39,7 +39,7 @@ int main()
         {
             currentWeight += weight[i];
             totalValue += price[i];
-            cout << "Item " << i << " fully taken, Weight: " << weight[i] << ", Price: " << price[i] << "\n";
+            cout << "Item " << i << " fully taken\n";
         }
         else
         {
