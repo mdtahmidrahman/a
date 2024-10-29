@@ -10,8 +10,6 @@ int main()
     for(int i = 0; i < n; i++) cin >> c[i];
   
     int solution[n + 1][amt + 1];
-
-    // Initialize the solution table
     for(int i = 0; i <= n; i++)
     {
         for(int j = 0; j <= amt; j++)
