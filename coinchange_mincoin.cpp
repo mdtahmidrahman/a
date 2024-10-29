@@ -8,8 +8,7 @@ int main()
 
     int c[n];
     cout << "Enter Coins\n";
-    for(int i = 0; i < n; i++)
-        cin >> c[i];
+    for(int i = 0; i < n; i++) cin >> c[i];
 
     int sol[n + 1][amt + 1];
     for(int i = 0; i <= n; i++)
