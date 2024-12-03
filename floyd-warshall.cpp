@@ -39,7 +39,6 @@ int main()
             }
         }
     }
-
     cout << "Enter edges (source destination weight):\n";
     for(int i = 0; i < e; i++)
     {
@@ -63,18 +62,6 @@ int main()
             }
         }
     }
-
-    // Check for negative weight cycles
-    bool hasNegativeCycle = false;
-    for(int i = 0; i < n; i++)
-    {
-        if(dist[i][i] < 0)
-        {
-            hasNegativeCycle = true;
-            break;
-        }
-    }
-
     if (hasNegativeCycle) cout << "Graph contains a negative weight cycle.\n";
     else cout << "No negative weight cycle detected.\n";
 
